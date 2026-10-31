@@ -1,0 +1,15 @@
+{
+  "name": "repomind",
+  "displayName": "RepoMind (nama kerja)",
+  "version": "0.1.0",
+  "publisher": "TODO",
+  "engines": { "vscode": "^1.90.0" },
+  "main": "./dist/extension.js",
+  "activationEvents": ["workspaceContains:**/tsconfig.json", "onCommand:repomind.start"],
+  "contributes": {
+    "commands": [{ "command": "repomind.start", "title": "RepoMind: Mulai analisis" }]
+  },
+  "scripts": { "build": "tsc -b" },
+  "dependencies": { "@repomind/core": "0.1.0" },
+  "devDependencies": { "@types/vscode": "^1.90.0" }
+}

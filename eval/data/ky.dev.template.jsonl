@@ -1,0 +1,6 @@
+{"id":"d01","split":"dev","type":"definition","question":"Di mana KyError didefinisikan?","refs":[{"path":"source/errors/KyError.ts","startLine":8,"endLine":8}]}
+{"id":"d02","split":"dev","type":"definition","question":"Di mana TimeoutError didefinisikan?","refs":[{"path":"source/errors/TimeoutError.ts","startLine":7,"endLine":7}]}
+{"id":"d03","split":"dev","type":"definition","question":"Di mana HTTPError didefinisikan?","refs":[{"path":"source/errors/HTTPError.ts","startLine":15,"endLine":15}]}
+{"id":"d04","split":"dev","type":"callers","question":"Apa yang memanggil fungsi normalizeRetryOptions?","refs":[{"path":"source/core/Ky.ts","startLine":493,"endLine":493},{"path":"source/core/Ky.ts","startLine":595,"endLine":595},{"path":"source/core/Ky.ts","startLine":689,"endLine":689},{"path":"source/core/Ky.ts","startLine":1223,"endLine":1223}]}
+{"id":"d05","split":"dev","type":"callers","question":"Di mana TimeoutError dibuat atau dilempar?","refs":[{"path":"source/core/Ky.ts","startLine":428,"endLine":428},{"path":"source/core/Ky.ts","startLine":713,"endLine":713},{"path":"source/core/Ky.ts","startLine":821,"endLine":821}]}
+{"id":"d06","split":"dev","type":"unanswerable","question":"Bagaimana ky menangani WebSocket?","refs":[]}

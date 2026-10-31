@@ -1,0 +1,20 @@
+{
+  "name": "@repomind/core",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "spike": "node --import tsx scripts/spike-sqlite.ts",
+    "try-repo": "node --import tsx scripts/try-repo.ts", "bench-update": "node --import tsx scripts/bench-update.ts", "ask-repo": "node --import tsx scripts/ask-repo.ts", "retrieve-repo": "node --import tsx scripts/retrieve-repo.ts", "ask-llm": "node --import tsx scripts/ask-llm.ts", "eval-retrieval": "node --import tsx scripts/eval-retrieval.ts", "eval-llm": "node --import tsx scripts/eval-llm.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.5.0",
+    "ignore": "^7.0.14",
+    "typescript": "^5.6.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "tsx": "^4.19.0"
+  }
+}
