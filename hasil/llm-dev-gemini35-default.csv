@@ -1,0 +1,34 @@
+id,split,type,question,status,answer,cites,valid_cites,unverified,uncited,refused,refused_correct,false_refusal,context_has_ref,context_ref_recall,cite_hits_ref,cite_ref_recall,tokens_in,tokens_out,usage_source,latency_ms,nilai_manual,catatan
+d01,dev,definition,Di mana KyError didefinisikan?,error:RATE_LIMIT,,,0,,,0,,0,1,1,0,0,,,,2357,,
+d02,dev,definition,Di mana TimeoutError didefinisikan?,error:RATE_LIMIT,,,0,,,0,,0,1,1,0,0,,,,2458,,
+d03,dev,definition,Di mana HTTPError didefinisikan?,error:RATE_LIMIT,,,0,,,0,,0,1,1,0,0,,,,2378,,
+d04,dev,callers,Apa yang memanggil fungsi normalizeRetryOptions?,error:RATE_LIMIT,,,0,,,0,,0,1,0.75,0,0,,,,2352,,
+d06,dev,unanswerable,Bagaimana ky menangani WebSocket?,error:RATE_LIMIT,,,0,,,0,0,,,,,,,,,2556,,
+d07,dev,callers,Di mana method #retryFromError dipanggil?,error:RATE_LIMIT,,,0,,,0,,0,1,0.5,0,0,,,,2674,,
+d08,dev,callers,Di mana method #decorateResponse dipanggil?,error:RATE_LIMIT,,,0,,,0,,0,1,0.75,0,0,,,,2362,,
+d09,dev,flow,Bagaimana ky menegakkan batas ukuran respons (maxResponseSize)?,answer,Ky menegakkan batas ukuran respons (`maxResponseSize`) melalui fungsi `limitResponseSize` dengan memanfaatkan `TransformStream` untuk mengawasi jumlah byte stream respons saat dibaca [F7:17,,0,0,1,0,,0,1,0.5,0,0,1524,41,provider,8392,,
+d10,dev,flow,Bagaimana ky memvalidasi hasil JSON dengan schema dan galat apa yang dilempar bila gagal?,answer,"Berikut adalah penjelasan tentang bagaimana Ky memvalidasi hasil JSON dengan skema (schema) dan galat (error) yang dilempar jika terjadi kegagalan:
+
+### 1. Cara Ky Memvalidasi Hasil JSON dengan Schema
+
+Proses validasi dilakukan melalui fungsi `validateJsonWithSchema` [F1:329-346]:
+
+1. **Pemeriksaan Skema:** Ky memeriksa apakah skema yang diberikan memenuhi spesifikasi Standard Schema dengan mengambil properti `~standard` dari objek atau fungsi skema [F1:330](format sitasi tidak valid).
+2. **Validasi",source/core/Ky.ts:329-346,1,1,0,0,,0,1,0.667,1,0.333,1429,123,provider,6467,,
+d11,dev,flow,Bagaimana ky melaporkan progres unggahan (onUploadProgress)?,answer,"Ky melaporkan progres unggahan (`onUploadProgress`) melalui alur berikut:
+
+1. **Pemeriksaan Dukungan dan Syarat Request**:
+   * Metode `#wrapRequestWithUploadProgress` pada `Ky` akan mengecek apakah callback `onUploadProgress` disediakan, `supportsRequestStreams` didukung, dan `request.body` ada [F2:1369-1371].
+   ",source/core/Ky.ts:1369-1371,1,0,0,0,,0,1,0.667,1,0.333,1948,88,provider,6281,,
+d13,dev,callers,Di mana TimeoutError dibuat atau dilempar?,answer,"Berdasarkan kode yang diberikan, `TimeoutError` dibuat dan dilempar pada beberapa lokasi berikut:
+
+1. **Pendefinisian Kelas (`TimeoutError`)**:
+   - Didefinisikan sebagai turunan dari `KyError` pada berkas `source/errors/TimeoutError.ts` [F5:8-14].
+
+2. **Lokasi Pelemparan/Pembuatan Instansi `TimeoutError`**:
+   - **`source/core/Ky.ts`**:
+     - Pada metode `#getErrorDataTimeout()`, dilempar dengan `throw new TimeoutError(request)` jika `remainingTotal === 0` [F2:857-859].
+     - Pada metode `#getEffectiveTimeout()`, dilempar dengan `throw new TimeoutError(this.#sentRequest)` jika `remainingTotal === 0` [F3:870-872].
+   - **`source/utils/timeout.ts`**:
+     - Pada fungsi `timeout()`, dilempar (melalui pemanggilan `reject()`) menggunakan `new TimeoutError(request)` di dalam *callback* `setTimeout` saat batas waktu permintaan terlampaui [F6:21-27].",source/errors/TimeoutError.ts:8-14 | source/core/Ky.ts:857-859 | source/core/Ky.ts:870-872 | source/utils/timeout.ts:21-27,4,0,0,0,,0,1,0.2,1,0.2,1375,264,provider,5612,,
+d14,dev,unanswerable,Bagaimana ky melakukan paginasi otomatis pada API yang mengembalikan banyak halaman?,error:RATE_LIMIT,,,0,,,0,0,,,,,,,,,2653,,

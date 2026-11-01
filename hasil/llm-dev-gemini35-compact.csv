@@ -1,0 +1,13 @@
+id,split,type,question,status,answer,cites,valid_cites,unverified,uncited,refused,refused_correct,false_refusal,context_has_ref,context_ref_recall,cite_hits_ref,cite_ref_recall,tokens_in,tokens_out,usage_source,latency_ms,nilai_manual,catatan
+d01,dev,definition,Di mana KyError didefinisikan?,answer,`KyError` didefinisikan dalam file `source/errors/KyError.ts` [F4:11-14].,source/errors/KyError.ts:11-14,1,0,0,0,,0,1,1,0,0,2028,30,provider,2927,,
+d02,dev,definition,Di mana TimeoutError didefinisikan?,answer,`TimeoutError` didefinisikan di `source/errors/TimeoutError.ts` [F5:7-14].,source/errors/TimeoutError.ts:7-14,1,0,0,0,,0,1,1,1,1,1334,27,provider,2595,,
+d03,dev,definition,Di mana HTTPError didefinisikan?,answer,`HTTPError` didefinisikan di `source/errors/HTTPError.ts` [F2:15-20].,source/errors/HTTPError.ts:15-20,1,0,0,0,,0,1,1,1,1,1302,29,provider,7755,,
+d04,dev,callers,Apa yang memanggil fungsi normalizeRetryOptions?,error:RATE_LIMIT,,,0,,,0,,0,1,0.75,0,0,,,,2865,,
+d06,dev,unanswerable,Bagaimana ky menangani WebSocket?,error:RATE_LIMIT,,,0,,,0,0,,,,,,,,,2570,,
+d07,dev,callers,Di mana method #retryFromError dipanggil?,answer,Method `#retryFromError` dipanggil di dalam method `#retry()` pada blok `catch` [F1:1116-1121].,source/core/Ky.ts:1116-1121,1,0,0,0,,0,1,0.5,1,0.5,1878,33,provider,3852,,
+d08,dev,callers,Di mana method #decorateResponse dipanggil?,error:RATE_LIMIT,,,0,,,0,,0,1,0.75,0,0,,,,2060,,
+d09,dev,flow,Bagaimana ky menegakkan batas ukuran respons (maxResponseSize)?,error:RATE_LIMIT,,,0,,,0,,0,1,0.5,0,0,,,,2853,,
+d10,dev,flow,Bagaimana ky memvalidasi hasil JSON dengan schema dan galat apa yang dilempar bila gagal?,error:RATE_LIMIT,,,0,,,0,,0,1,0.667,0,0,,,,2548,,
+d11,dev,flow,Bagaimana ky melaporkan progres unggahan (onUploadProgress)?,error:RATE_LIMIT,,,0,,,0,,0,1,0.667,0,0,,,,2362,,
+d13,dev,callers,Di mana TimeoutError dibuat atau dilempar?,error:RATE_LIMIT,,,0,,,0,,0,1,0.2,0,0,,,,2453,,
+d14,dev,unanswerable,Bagaimana ky melakukan paginasi otomatis pada API yang mengembalikan banyak halaman?,error:RATE_LIMIT,,,0,,,0,0,,,,,,,,,2353,,
