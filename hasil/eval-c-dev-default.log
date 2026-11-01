@@ -1,0 +1,21 @@
+﻿Dikecualikan dari metrik utama (acuan tidak lengkap): d05; gunakan --include-incomplete untuk menyertakan
+Model qwen25c3b-8k | varian default | K=8 anggaran=3000 mcpf=3 | 12 pertanyaan, 0 sudah selesai
+[d01] answer | sitasi valid 0 | konteks memuat acuan: 1 | sitasi kena acuan: - | 1 s
+[d02] answer | sitasi valid 0 | konteks memuat acuan: 1 | sitasi kena acuan: - | 1 s
+[d03] answer | sitasi valid 0 | konteks memuat acuan: 1 | sitasi kena acuan: - | 1 s
+[d04] answer | sitasi valid 0 | konteks memuat acuan: 1 | sitasi kena acuan: - | 2 s
+[d06] answer | sitasi valid 0 | konteks memuat acuan: - | sitasi kena acuan: - | 3 s
+[d07] answer | sitasi valid 0 | konteks memuat acuan: 1 | sitasi kena acuan: - | 1 s
+[d08] answer | sitasi valid 0 | konteks memuat acuan: 1 | sitasi kena acuan: - | 1 s
+[d09] answer | sitasi valid 0 | konteks memuat acuan: 1 | sitasi kena acuan: - | 4 s
+[d10] answer | sitasi valid 0 | konteks memuat acuan: 1 | sitasi kena acuan: - | 1 s
+[d11] answer | sitasi valid 0 | konteks memuat acuan: 1 | sitasi kena acuan: - | 4 s
+[d12] answer | sitasi valid 0 | konteks memuat acuan: - | sitasi kena acuan: - | 4 s
+[d13] answer | sitasi valid 0 | konteks memuat acuan: 1 | sitasi kena acuan: - | 2 s
+
+Selesai. CSV: D:\repomind\hasil\llm-dev-default.csv (isi kolom nilai_manual: benar | sebagian | salah)
+Dikecualikan dari metrik utama (acuan tidak lengkap): d05, d12; gunakan --include-incomplete untuk menyertakan
+Model qwen25c3b-8k | varian default | K=8 anggaran=3000 mcpf=3 | 12 pertanyaan, 12 sudah selesai
+[d14] answer | sitasi valid 0 | konteks memuat acuan: - | sitasi kena acuan: - | 4 s
+
+Selesai. CSV: D:\repomind\hasil\llm-dev-default.csv (isi kolom nilai_manual: benar | sebagian | salah)

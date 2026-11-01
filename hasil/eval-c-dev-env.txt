@@ -1,0 +1,20 @@
+﻿== 2026-11-01T09:29:28.0671792+07:00 Eval C dev (Windows)
+model=qwen25c3b-8k k=8 budget=3000 mcpf=3 max_tokens=200 timeout_ms=400000
+ky_sha=3541888878c4d303a8bc2ad61815f4e048f55a5d
+ky_source_tree_sha256=b30fda531dd3ea59ae23c0f20e62456ac41f93f474f4c00a99411636a49d8838
+repo_commit=a426afda87904240c8b7270bf657b42d24d3cc03
+dataset_sha256=e3c469321da7c201202afca6f1a06df52af546a1d1cfebeeec5d40e0d0dfda49
+node=v22.16.0 ollama=ollama version is 0.40.13
+ollama_list=qwen25c3b-8k:latest    d0336a61cb66    1.9 GB    25 minutes ago        | qwen2.5-coder:3b       f72c60cabf62    1.9 GB    About an hour ago    
+cpu=11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz gpu=NVIDIA GeForce RTX 3050 Ti Laptop GPU; Intel(R) UHD Graphics ram_tersedia_mb=5746
+ollama_ps=NAME                   ID              SIZE      PROCESSOR    CONTEXT    RUNNER      UNTIL               | qwen25c3b-8k:latest    d0336a61cb66    2.3 GB    100% GPU     8192       llamacpp    4 minutes from now    
+== 2026-11-01T10:14:59.2510169+07:00 Eval C dev (Windows)
+model=qwen25c3b-8k k=8 budget=3000 mcpf=3 max_tokens=200 timeout_ms=400000
+ky_sha=3541888878c4d303a8bc2ad61815f4e048f55a5d
+ky_source_tree_sha256=b30fda531dd3ea59ae23c0f20e62456ac41f93f474f4c00a99411636a49d8838
+repo_commit=a426afda87904240c8b7270bf657b42d24d3cc03
+dataset_sha256=c214a9c7fa464345d0033656bfc24793a6c53a659cfbcaec6f70101ff7b6740e
+node=v22.16.0 ollama=ollama version is 0.40.13
+ollama_list=qwen25c3b-8k:latest    d0336a61cb66    1.9 GB    About an hour ago     | qwen2.5-coder:3b       f72c60cabf62    1.9 GB    2 hours ago          
+cpu=11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz gpu=NVIDIA GeForce RTX 3050 Ti Laptop GPU; Intel(R) UHD Graphics ram_tersedia_mb=5892
+ollama_ps=NAME                   ID              SIZE      PROCESSOR    CONTEXT    RUNNER      UNTIL               | qwen25c3b-8k:latest    d0336a61cb66    2.3 GB    100% GPU     8192       llamacpp    4 minutes from now    

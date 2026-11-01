@@ -1,0 +1,92 @@
+id,split,type,question,status,answer,cites,valid_cites,unverified,uncited,refused,refused_correct,false_refusal,context_has_ref,context_ref_recall,cite_hits_ref,cite_ref_recall,tokens_in,tokens_out,usage_source,latency_ms,nilai_manual,catatan
+d01,dev,definition,Di mana KyError didefinisikan?,answer,KyError didefinisikan pada file `KyError.ts` pada baris 1-14.,,0,0,1,0,,0,1,1,0,0,1890,24,provider,1202,,
+d02,dev,definition,Di mana TimeoutError didefinisikan?,answer,TimeoutError didefinisikan pada file `KyError.ts` pada baris 11-15.,,0,0,1,0,,0,1,1,0,0,1256,25,provider,840,,
+d03,dev,definition,Di mana HTTPError didefinisikan?,answer,"HTTPError didefinisikan pada file [F2](format sitasi tidak valid) source/errors/HTTPError.ts, pada baris 15-20.",,0,1,1,0,,0,1,1,0,0,1252,31,provider,929,,
+d04,dev,callers,Apa yang memanggil fungsi normalizeRetryOptions?,answer,Fungsi `normalizeRetryOptions` dipanggil pada baris 484-526 dari file `Ky.ts`. Ini terjadi saat objek opsi (`options`) dikonstruksi dan digunakan untuk menginisialisasi properti `#options` pada objek `Ky`.,,0,0,1,0,,0,1,0.75,0,0,2465,65,provider,1954,,
+d06,dev,unanswerable,Bagaimana ky menangani WebSocket?,answer,"[Ky.ts:348-348](format sitasi tidak valid)
+```typescript
+export class Ky {
+```
+
+[Ky.ts:58-58](format sitasi tidak valid)
+```typescript
+const ky = createInstance();
+```
+
+[Ky.ts:147-209](format sitasi tidak valid)
+```typescript
+beforeRequest?: readonly BeforeRequestHook[] | undefined;
+```
+
+[Ky.ts:100-128](format sitasi tidak valid)
+```typescript
+stringifyJson?: ((data: unknown) => string) | undefined;
+```
+
+[Ky.ts:270-297](format sitasi tidak valid)
+```typescript
+hooks?: Hooks | undefined;
+```
+
+[Ky.ts:3892-3908](format sitasi tidak valid)
+```typescript
+const createCutConnectionServer = async (t: ExecutionContext) => {
+```",,0,6,1,0,0,,,,,,2154,158,provider,3255,,
+d07,dev,callers,Di mana method #retryFromError dipanggil?,answer,Method `#retryFromError` dipanggil pada baris 1116-1216 pada file `source/core/Ky.ts`.,,0,0,1,0,,0,1,0.5,0,0,1779,33,provider,1194,,
+d08,dev,callers,Di mana method #decorateResponse dipanggil?,answer,Method `#decorateResponse` dipanggil pada baris 659-663 dari file `Ky.ts`.,,0,0,1,0,,0,1,0.75,0,0,877,27,provider,707,,
+d09,dev,flow,Bagaimana ky menegakkan batas ukuran respons (maxResponseSize)?,answer,"Berdasarkan potongan kode yang diberikan, batas ukuran respons (maxResponseSize) diimplementasikan dalam fungsi `readResponseText` di file `Ky.ts`. Berikut adalah penjelasan:
+
+1. **Definisi `maxErrorResponseBodySize`:**
+   - [F1](format sitasi tidak valid) path=source/core/Ky.ts baris=62-62
+   - Variabel `maxErrorResponseBodySize` diinisialisasi dengan nilai 10 MB (10 * 1024 * 1024).
+
+2. **Fungsi `readResponseText`:**
+   - [F2](format sitasi tidak valid) path=source/core/Ky.ts baris=136-195
+   - Fungsi ini membaca konten respons dan membatasi ukuran respons yang diterima.
+   - Jika ukuran respons melebihi `maxErrorResponseBodySize`, fungsi akan mengh",,0,2,1,0,,0,1,0.5,0,0,1356,200,provider,3502,,
+d10,dev,flow,Bagaimana ky memvalidasi hasil JSON dengan schema dan galat apa yang dilempar bila gagal?,answer,"```json
+{
+  ""message"": ""Response schema validation failed"",
+  ""issues"": [
+    {
+      ""message"": ""Expected object, got undefined"",
+      ""path"": []
+    }
+  ]
+}
+```",,0,0,1,0,,0,1,0.667,0,0,1319,44,provider,1146,,
+d11,dev,flow,Bagaimana ky melaporkan progres unggahan (onUploadProgress)?,answer,"[Ky.ts:348-348](format sitasi tidak valid) Ketika `Ky` menciptakan request, ia memeriksa apakah ada handler `onUploadProgress` yang diterapkan. Jika ada, ia memastikan bahwa request memiliki dukungan untuk stream request dan bahwa request memiliki body. Jika semua syarat terpenuhi, ia memanggil fungsi `streamRequest` untuk mengubah request menjadi request yang dapat di-streaming dan menambahkan handler `onUploadProgress` untuk mengirimkan progress upload.
+
+[Ky.ts:1368-1375](format sitasi tidak valid) Fungsi `#wrapRequestWithUploadProgress` di `Ky` memeriksa apakah ada handler `onUploadProgress` yang diterapkan dan apakah request memiliki dukungan untuk stream request. Jika semua syarat terpenuhi, ia memanggil fungsi `streamRequest` untuk mengubah request menjadi request yang dapat di-stream",,0,2,1,0,,0,1,0.667,0,0,1833,200,provider,3717,,
+d12,dev,unanswerable,Bagaimana ky melakukan otentikasi OAuth dan menyegarkan token kedaluwarsa?,answer,"Untuk melakukan otentikasi OAuth dan menyegarkan token kedaluwarsa, Anda dapat menggunakan hook `beforeRequest` atau `beforeRetry` dalam fungsi `ky.create()` atau `ky.extend()`. Berikut adalah contoh penggunaan:
+
+1. **Hook `beforeRequest`:**
+
+   Anda dapat menggunakan hook `beforeRequest` untuk menambahkan atau mengubah header Authorization setelah setiap permintaan. Misalnya, jika Anda menggunakan OAuth 2.0, Anda dapat menambahkan token access ke header Authorization setiap kali permintaan dilakukan.
+
+   ```typescript
+   const api = ky.create({
+     hooks: {
+       beforeRequest: [
+         async ({request}) => {
+           const token = await ky('https://api.example.com/token').json();
+           request.headers.set('Authorization', `Bearer ${token}`);
+         }
+       ]
+     }
+   });
+   ```
+
+2. **Hook `beforeRetry`:**
+
+   Anda dapat menggunakan",,0,0,1,0,0,,,,,,2708,200,provider,4166,,
+d13,dev,callers,Di mana TimeoutError dibuat atau dilempar?,answer,"TimeoutError dibuat dan dilempar di dalam fungsi `timeout` di file `source/utils/timeout.ts`. Fungsi ini mengatur timeout untuk permintaan dan mengembalikan promise yang dijalankan dengan `fetch`. Jika timeout terlewat, fungsi ini akan memulai timer dan menghentikan permintaan menggunakan `AbortController`. Jika permintaan berhasil sebelum timeout, promise akan diresolve dengan respons. Jika permintaan gagal karena timeout, promise akan direject dengan `TimeoutError`.",,0,0,1,0,,0,1,0.2,0,0,1259,114,provider,2213,,
+d14,dev,unanswerable,Bagaimana ky melakukan paginasi otomatis pada API yang mengembalikan banyak halaman?,answer,"Jawaban:
+
+Ky tidak secara otomatis melakukan paginasi pada API yang mengembalikan banyak halaman. Untuk melakukan paginasi, Anda perlu menangani respons dan memeriksa apakah ada informasi tentang halaman berikutnya atau batas total. Berikut adalah beberapa langkah yang dapat Anda lakukan:
+
+1. **Pemeriksaan Header Pagination**: Jika API mengembalikan header seperti `Link` atau `X-Total-Count`, Anda dapat menggunakan ini untuk menentukan jumlah halaman dan halaman saat ini.
+
+2. **Pemanggilan API Berulang**: Anda dapat membuat fungsi yang memanggil API berulang kali, menambahkan parameter `page` atau `offset` untuk menentukan halaman yang ingin Anda ambil.
+
+3. **Pemanggilan API Bersamaan**: Anda dapat menggunakan teknik seperti `Promise.all` atau `async/await`",,0,0,1,0,0,,,,,,2736,200,provider,4259,,
